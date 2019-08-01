@@ -1,3 +1,32 @@
-<p>
-  brand-products works!
-</p>
+<div class="container">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-sm-4">
+        Brand Name
+      </div>
+      <div class="col-sm-8 text-right">
+        <div class="row">
+          <input type="text" class="form-control col-sm-4">
+          <input type="text" class="form-control col-sm-4">
+          <input type="text" class="form-control col-sm-4">
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row text-center">
+    <div class="col-sm-3 p-3" *ngFor="let item of tempProduct">
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top" src="./assets/images/thumb.png" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">BUY</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
