@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MobileBrandService } from '../services/mobile-brand.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  allBrands: any;
+  temp = [1,2,3,4];
+  constructor(private brandService: MobileBrandService) { 
+    this.allBrands = this.brandService.getAllBrands();
+  }
 
   ngOnInit() {
   }

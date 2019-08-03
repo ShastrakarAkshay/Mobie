@@ -7,13 +7,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BrandProductsComponent } from './brand-products/brand-products.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ViewProductComponent } from './view-product/view-product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     BrandProductsComponent,
-    HomeComponent
+    HomeComponent,
+    ViewProductComponent
   ],
   imports: [
     BrowserModule,

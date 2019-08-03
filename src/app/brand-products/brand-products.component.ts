@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MobileBrandService } from '../services/mobile-brand.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-brand-products',
@@ -8,12 +9,19 @@ import { MobileBrandService } from '../services/mobile-brand.service';
 })
 export class BrandProductsComponent implements OnInit {
 
-  products: any;
-  tempProduct = [10,20,30,40,50,60,70,80,90,100];
-  constructor(private mobileBrand: MobileBrandService) { }
+  productsInfo: any[] = [];
+  brandInfo: any;
+  brandId: number;
+  brandTitle: string = "";
 
-  ngOnInit() {
-    
+  constructor(private mobileBrand: MobileBrandService, private route: ActivatedRoute) {
+    this.route.params.subscribe(param => {
+      this.brandId = parseInt(param['productId']);
+    });
+    this.brandInfo = this.mobileBrand.getBrandById(this.brandId);
+    this.productsInfo = this.mobileBrand.getProductsByBrand(this.brandId);
   }
-
+  
+  ngOnInit() {}
+  
 }

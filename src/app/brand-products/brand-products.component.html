@@ -3,7 +3,8 @@
   <div class="jumbotron">
     <div class="row">
       <div class="col-sm-6">
-        Brand Name
+        <!-- <img src="./assets/images/{{brandInfo.brandName}}.png" alt=""/> -->
+        <h2>{{brandInfo.brandName}}</h2>
       </div>
       <div class="col-sm-6 text-right">
         <div class="row">
@@ -15,16 +16,16 @@
   </div>
   
   <div class="row text-center">
-    <div class="col-sm-3 p-3" *ngFor="let item of tempProduct">
+    <div class="col-sm-3 p-3" *ngFor="let item of productsInfo">
       <div class="card" style="width: 15rem;">
         <img class="card-img-top" src="./assets/images/thumb.png" alt="Card image cap" />
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title">{{brandInfo.brandName + "" + item.productId}}</h5>
           <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            Memory {{item.Specifications.ram + "+" + item.Specifications.memory}}
           </p>
-          <a href="#" class="btn btn-primary">BUY NOW</a>
+          <p class="card-text"><b>{{"Rs. " + item.price}}</b></p>
+          <a class="btn btn-primary" routerLink="viewProduct">View</a>
         </div>
       </div>
     </div>
