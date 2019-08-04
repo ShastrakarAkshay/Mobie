@@ -1,0 +1,59 @@
+.btn-add,
+.btn-minus {
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(#fff, #f9f9f9);
+  display: inline-block;
+  border: 1px solid #c2c2c2;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 50%;
+  padding-top: 1px;
+  line-height: 1;
+}
+
+.quantity {
+  border: none;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.quantity {
+  display: inline-block;
+  padding: 3px 6px;
+  width: calc(100% - 60px);
+  height: 100%;
+  width: 46px;
+  height: 28px;
+  border-radius: 2px;
+  background-color: #fff;
+  border: 1px solid #c2c2c2;
+  margin: 0 9px;
+}
+
+.checkout {
+  background: #399170;
+  padding: 1em 1em;
+  border: none;
+  text-transform: UPPERCASE;
+  font-weight: bold;
+  color: #fff;
+  width: 100%;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background: #b36800;
+  color: #fff;
+}
+
+.checkDiv {
+  background: #ededed;
+  border-radius: 5px;
+  padding: 2em;
+  padding-bottom: 4em;
+}
