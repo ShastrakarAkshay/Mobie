@@ -182,10 +182,11 @@ export class MobileBrandService {
       "brandName": "Nokia",
     },
   ];
+
   constructor(private http: HttpClient) { }
 
   getBrandById(productId) {
-    for(var item of this.brandInfo){
+    for(let item of this.brandInfo){
       if(item.productId == productId){
         return item;
       }
@@ -198,6 +199,14 @@ export class MobileBrandService {
 
   getProductsByBrand(brandId) {
     return this.products;
+  }
+
+  getProductDetailById(id){
+    for(let item of this.products){
+      if(item.productId == id){
+        return item;
+      }
+    }
   }
 
 }

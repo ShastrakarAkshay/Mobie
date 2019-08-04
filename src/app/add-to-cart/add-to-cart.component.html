@@ -1,0 +1,25 @@
+<div class="container">
+  <br>
+  <h4>Cart Details</h4>
+  <br>
+  <table class="table table-striped">
+    <thead class="bg-dark text-white">
+      <tr>
+        <th>ID</th>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of cartDetails">
+        <td>{{product.productId}}</td>
+        <td>{{product.modelName}}</td>
+        <td>{{product.price}}</td>
+        <td>
+          <button class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

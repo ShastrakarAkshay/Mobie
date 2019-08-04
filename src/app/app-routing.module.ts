@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { BrandProductsComponent } from './brand-products/brand-products.component';
 import { HomeComponent } from './home/home.component';
 import { ViewProductComponent } from './view-product/view-product.component';
+import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 
 const routes: Routes = [
   {
@@ -12,17 +13,15 @@ const routes: Routes = [
   },
   {
     path: 'products/:productId',
-    component: BrandProductsComponent,
-    children: [
-      {
-        path: 'viewProduct',
-        component: ViewProductComponent
-      }
-    ]
+    component: BrandProductsComponent
   },
   {
-    path: 'viewProduct',
+    path: 'products/:productId/viewProduct/:modelId',
     component: ViewProductComponent
+  },
+  {
+    path: 'addToCart',
+    component: AddToCartComponent
   }
 ];
 
