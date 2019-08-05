@@ -19,7 +19,8 @@ export class MobileBrandService {
         "rear-camera": "16MP",
         "os": "Oreo"
       },
-      "price": "14999"
+      "price": "14999",
+      "quantity":"1"
     },
     {
       "productId": "2",
@@ -32,7 +33,8 @@ export class MobileBrandService {
         "rear-camera": "16MP",
         "os": "Oreo"
       },
-      "price": "15999"
+      "price": "15999",
+      "quantity":"1"
     },
     {
       "productId": "3",
@@ -45,7 +47,8 @@ export class MobileBrandService {
         "rear-camera": "16MP",
         "os": "Oreo"
       },
-      "price": "16999"
+      "price": "16999",
+      "quantity":"1"
     },
     {
       "productId": "4",
@@ -58,7 +61,8 @@ export class MobileBrandService {
         "rear-camera": "16MP",
         "os": "Oreo"
       },
-      "price": "17999"
+      "price": "17999",
+      "quantity":"1"
     },
     {
       "productId": "5",
@@ -71,7 +75,8 @@ export class MobileBrandService {
         "rear-camera": "16MP",
         "os": "Oreo"
       },
-      "price": "14999"
+      "price": "14999",
+      "quantity":"1"
     },
     {
       "productId": "6",
@@ -84,7 +89,8 @@ export class MobileBrandService {
         "rear-camera": "16MP",
         "os": "Oreo"
       },
-      "price": "12999"
+      "price": "12999",
+      "quantity":"1"
     },
     {
       "productId": "7",
@@ -97,7 +103,8 @@ export class MobileBrandService {
         "rear-camera": "16MP",
         "os": "Oreo"
       },
-      "price": "14999"
+      "price": "14999",
+      "quantity":"1"
     },
     {
       "productId": "8",
@@ -110,7 +117,8 @@ export class MobileBrandService {
         "rear-camera": "16MP",
         "os": "Oreo"
       },
-      "price": "10999"
+      "price": "10999",
+      "quantity":"1"
     },
     {
       "productId": "9",
@@ -123,7 +131,8 @@ export class MobileBrandService {
         "rear-camera": "16MP",
         "os": "Oreo"
       },
-      "price": "19999"
+      "price": "19999",
+      "quantity":"1"
     },
     {
       "productId": "10",
@@ -136,7 +145,8 @@ export class MobileBrandService {
         "rear-camera": "16MP",
         "os": "Oreo"
       },
-      "price": "14999"
+      "price": "14999",
+      "quantity":"1"
     },
   ];
 
