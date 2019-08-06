@@ -36,4 +36,16 @@ export class CartService {
     this.cartDetails = cartArr;
     return this.cartDetails;
   }
+
+  updateQuantity(id, quantity){
+    let cartArr = [];
+    for(let product of this.cartDetails){
+      if(product.productId == id){
+        product.quantity = quantity;
+      }
+      cartArr.push(product);
+    }
+    this.cartDetails = cartArr;
+    return this.cartDetails;
+  }
 }

@@ -21,11 +21,11 @@
             <td>{{product.price}}</td>
             <td>
               <div class="row">
-                <button class="btn-minus" (click)="decrementQuantity()"> - </button>
+                <button class="btn-minus" (click)="decrementQuantity(product.productId, product.quantity)"> - </button>
                 <div class="quantityDiv">
-                  <input type="text" value="1" class="quantity" [(ngModel)]="quantity">
+                  <input type="text" [value]="product.quantity" class="quantity">
                 </div>
-                <button class="btn-add" (click)="incrementQuantity()"> + </button>
+                <button class="btn-add" (click)="incrementQuantity(product.productId, product.quantity)"> + </button>
               </div>
 
             </td>
@@ -46,16 +46,16 @@
         <hr>
         <div class="row pr-4">
           <div class="col-sm-6"><p><b>Price ({{totalItems}} item)</b></p></div>
-          <div class="col-sm-6 text-right"><b>{{totalPrice | currency:INR}}</b></div>
+          <div class="col-sm-6 text-right"><b>{{totalPrice | currency:'INR':true}}</b></div>
         </div>
         <div class="row pr-4">
           <div class="col-sm-6"><p><b>Delivery Charges</b></p></div>
-          <div class="col-sm-6 text-right"><b>{{totalCharges | currency:INR}}</b></div>
+          <div class="col-sm-6 text-right"><b>{{totalCharges | currency:'INR':true}}</b></div>
         </div>
         <hr>
         <div class="row pr-4">
           <div class="col-sm-6"> <p><b>Total Payable</b></p></div>
-          <div class="col-sm-6 text-right"><b>{{totalPayable | currency:INR}}</b></div>
+          <div class="col-sm-6 text-right"><b>{{totalPayable | currency:'INR':true}}</b></div>
         </div>
 
         <div class="action text-center mt-4">

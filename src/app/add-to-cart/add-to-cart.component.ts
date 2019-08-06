@@ -17,6 +17,7 @@ export class AddToCartComponent implements OnInit {
 
   constructor(private cartService: CartService) { 
     this.cartDetails = this.cartService.getCartDetails();
+    this.calculateCheckoutDetails(this.cartDetails);
     this.totalItems = this.cartDetails.length;
   }
   
@@ -27,16 +28,39 @@ export class AddToCartComponent implements OnInit {
   removeItem(productId){
     this.cartDetails = this.cartService.removeCartItem(productId);
     this.totalItems = this.cartDetails.length;
+    this.calculateCheckoutDetails(this.cartDetails);
   }
 
-  incrementQuantity(){
-    if(this.quantity < 10)
-      this.quantity+=1;
+  incrementQuantity(id, quantity){
+    quantity = parseInt(quantity);
+    if(quantity < 10)
+      quantity+=1;
+    this.cartDetails = this.cartService.updateQuantity(id, quantity);
+    this.calculateCheckoutDetails(this.cartDetails);
   }
   
-  decrementQuantity(){
-    if(this.quantity > 1)
-      this.quantity-=1;
+  decrementQuantity(id, quantity){
+    quantity = parseInt(quantity);
+    if(quantity > 1)
+      quantity-=1;
+    this.cartDetails = this.cartService.updateQuantity(id, quantity);
+    this.calculateCheckoutDetails(this.cartDetails);
+  }
+
+  calculateCheckoutDetails(cartItems){
+    this.resetCheckout();
+    for(let item of cartItems){
+      this.totalPrice = this.totalPrice + parseInt(item.price)*parseInt(item.quantity);
+    }
+    if(this.totalPrice < 20000 && cartItems.length>0)
+      this.totalCharges = 100;
+    this.totalPayable = this.totalPrice + this.totalCharges;
+  }
+
+  resetCheckout(){
+    this.totalCharges = 0;
+    this.totalPayable = 0;
+    this.totalPrice= 0;
   }
 
 }
