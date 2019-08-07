@@ -10,6 +10,9 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    setTimeout(function(){
+      document.getElementById('#login').click();
+    }, 3000);
   }
 
 }
