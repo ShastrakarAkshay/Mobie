@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-navbar',
@@ -7,12 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  loginForm: FormGroup;
+  signupForm: FormGroup;
+
+  constructor() {
+    this.loginForm = new FormGroup({
+      username: new FormControl('', Validators.email),
+      password: new FormControl('', Validators.required)
+    });
+  
+    this.signupForm = new FormGroup({
+      name: new FormControl(''),
+      email: new FormControl(''),
+      password: new FormControl(''),
+      confirmPassword: new FormControl('')
+    });
+   }
 
   ngOnInit() {
-    setTimeout(function(){
-      document.getElementById('#login').click();
-    }, 3000);
   }
 
 }
